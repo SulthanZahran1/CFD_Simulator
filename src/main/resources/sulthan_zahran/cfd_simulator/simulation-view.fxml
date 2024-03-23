@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Canvas?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:controller="sulthan_zahran.cfd_simulator.SimulationController" xmlns:fx="http://javafx.com/fxml/1" spacing="10" padding="10">
+    <!-- Canvas for the simulation -->
+    <Canvas fx:id="simulationCanvas" width="600" height="400" />
+
+    <!-- Controls for the simulation parameters -->
+    <VBox spacing="5">
+        <!-- Slider for adjusting the velocity -->
+        <Slider fx:id="velocitySlider" min="0" max="100" value="50" showTickLabels="true" showTickMarks="true" />
+
+        <!-- TextField for setting the viscosity -->
+        <TextField fx:id="viscosityField" promptText="Enter viscosity value" />
+
+        <!-- Button to start the simulation -->
+        <Button fx:id="startButton" onAction="#onStartButtonClick" text="Start Simulation" maxWidth="Infinity" />
+
+        <!-- Button to stop the simulation -->
+        <Button fx:id="stopButton" onAction="#onStopButtonClick" text="Stop Simulation" maxWidth="Infinity" />
+    </VBox>
+</VBox>
